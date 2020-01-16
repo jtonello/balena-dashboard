@@ -1,0 +1,37 @@
+version: '2'
+services:
+  wpe:
+    restart: always
+    build: ./wpe
+    privileged: true
+    ports:
+      - 8080:8080
+  scheduler:
+    restart: always
+    build: ./scheduler
+    privileged: true
+  wifi-connect:
+    build: ./wifi-connect
+    restart: always
+    network_mode: host
+    privileged: true
+    labels:
+      io.balena.features.dbus: '1'
+      io.balena.features.firmware: '1'
+  photos:
+    privileged: true
+    restart: always
+    build: ./photos
+    ports:
+      - "8888:8888"
+
+# Add prometheus to this app    
+
+  node_exporter:
+    build: ./node_exporter
+    ports:
+      - "9100:9100"
+    network_mode: host
+    container_name: node_exporter
+
+
