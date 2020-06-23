@@ -45,6 +45,7 @@ The list of items you’ll need is also included below:
 ![](https://www.balena.io/blog/content/images/2018/11/image17.jpg)
 
 ## Setup and configuration
+[![](https://www.balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
 
 Use of balenaDash requires that you allocate more memory to the GPU. This is achieved by adding (or editing the existing) the **Device configuration variable** `RESIN_HOST_CONFIG_gpu_mem`, for this project we recommend setting it to `396`.
 
