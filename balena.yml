@@ -1,4 +1,4 @@
-applicationConfigVaraibles:
+applicationConfigVariables:
     - BALENA_HOST_CONFIG_dtoverlay: piscreen,rotate=90,speed=32000000
     - RESIN_HOST_CONFIG_avoid_warnings: 1
     - RESIN_HOST_CONFIG_gpu_mem: 128
